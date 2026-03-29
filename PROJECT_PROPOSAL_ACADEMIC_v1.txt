@@ -1,0 +1,1650 @@
+FAIRFARE SYSTEM
+PROJECT PROPOSAL
+
+Bachelor in Computer Science
+St. Paul's University
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FORMATTING SPECIFICATIONS FOR MS WORD/LIBREOFFICE:
+─────────────────────────────────────────────────────
+
+MARGINS (Set in Page Layout):
+  • Top: 40mm (≈1.57 inches)
+  • Left: 40mm (≈1.57 inches)
+  • Right: 25mm (≈0.98 inches)
+  • Bottom: 25mm (≈0.98 inches)
+
+FONT SPECIFICATIONS:
+  • Font Family: Times New Roman
+  • Body Text Size: 12pt
+  • Line Spacing: 1.5 lines
+  • Alignment: Justified
+
+SPECIAL FORMATTING:
+  • Title Page: Font Size 16pt, ALL CAPITALS
+  • Table of Contents: Bold chapter titles, non-capitalized page numbers
+  • Formulas: Centered
+  • Figure Captions: Bottom of figure
+  • Printing: Back-to-back from Chapter One onwards
+  • Referencing Style: APA
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+COVER PAGE
+
+                              FAIRFARE SYSTEM
+                 TRANSPARENT FARE AND INCIDENT REPORTING SYSTEM
+                        FOR ONGATA RONGAI TRANSPORT
+
+
+                       A Project Submitted in Partial Fulfilment
+                      for the Degree in Bachelor of Computer Science
+                              in St. Paul's University
+
+
+                                   2026
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+[PAGE 1 - TITLE PAGE]
+
+A project submitted in partial fulfilment for the degree in Bachelor of Computer 
+Science in St. Paul's University.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+[PAGE 2 - DECLARATION PAGE]
+
+DECLARATION
+
+
+We declare that this project is our original work and has not been presented in 
+any other university or institution for academic credit.
+
+
+_________________________                          _________________________
+Student Name (Bold)                               Date
+[Insert student name in bold]
+
+
+_________________________                          _________________________
+Supervisor Name (Bold)                            Date
+[Insert supervisor name in bold]
+
+
+SIGNATURE PAGE REQUIREMENTS (all headings centered):
+  • Student name should be in bold and indented
+  • Supervisor name should be in bold and indented
+  • Space for signatures and dates as shown above
+
+═══════════════════════════════════════════════════════════════════════════════
+Pagination Starts Here - Page 2
+═══════════════════════════════════════════════════════════════════════════════
+
+
+DEDICATION
+
+
+This project is dedicated to all transport users in Ongata Rongai who deserve 
+transparent fare systems and safe, accountable public transportation services.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+ACKNOWLEDGEMENT
+
+
+We would like to extend our sincere gratitude to the following individuals and 
+organizations whose invaluable contributions made the completion of this project 
+possible:
+
+1. Our supervisor and project guide for their expert guidance and continuous 
+   support throughout this project.
+
+2. St. Paul's University for providing the necessary resources and academic 
+   environment.
+
+3. The residents and matatu operators of Ongata Rongai for their insights into 
+   the transportation sector challenges.
+
+4. Our families and colleagues for their encouragement and support.
+
+5. All individuals who participated in interviews and questionnaires during the 
+   requirements gathering phase.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+TABLE OF CONTENTS
+
+CHAPTER ONE
+Introduction............................................................................
+Background..............................................................................
+Challenges..............................................................................
+Problem Statement........................................................................
+Proposed Solutions.......................................................................
+Proposed System..........................................................................
+Scope...................................................................................
+Justification............................................................................
+Budget..................................................................................
+Schedule................................................................................
+
+CHAPTER TWO
+Literature Review........................................................................
+
+CHAPTER THREE
+Methodology.............................................................................
+System Requirements.....................................................................
+Context Diagram.........................................................................
+Flowcharts..............................................................................
+System Design...........................................................................
+Database Design.........................................................................
+  • Unnormalized Form....................................................................
+  • First Normal Form....................................................................
+  • Second Normal Form...................................................................
+  • Third Normal Form....................................................................
+  • Database Schema......................................................................
+Entity Relationship Diagram..............................................................
+Data Dictionary........................................................................
+Input/Output Design....................................................................
+
+CHAPTER FOUR
+Code Listing............................................................................
+Testing.................................................................................
+
+CHAPTER FIVE
+Implementation Strategy..................................................................
+Installation Guide......................................................................
+User Manual.............................................................................
+Implementation Schedule.................................................................
+
+REFERENCES..............................................................................
+
+APPENDICES..............................................................................
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+LIST OF TABLES
+
+[Numbering for table numbers should be bold and centered]
+
+[Create list during final documentation with actual tables used]
+
+Table 1
+Table 2
+Table 3
+[etc. - to be populated with actual tables]
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+LIST OF APPENDICES
+
+Appendix A: User Interview Questions
+Appendix B: Data Collection Questionnaires
+Appendix C: Database Schema Diagrams
+Appendix D: System Interface Screenshots
+Appendix E: Code Listings for Key Modules
+Appendix F: Test Cases and Test Results
+Appendix G: Installation and Configuration Guide
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+ABBREVIATIONS AND ACRONYMS
+
+API         Application Programming Interface
+CORS        Cross-Origin Resource Sharing
+CSV         Comma-Separated Values
+DBMS        Database Management System
+HTTP        HyperText Transfer Protocol
+HTTPS       HyperText Transfer Protocol Secure
+ID          Identifier
+JSON        JavaScript Object Notation
+RBAC        Role-Based Access Control
+RESTful     Representational State Transfer
+SMS         Short Message Service
+SQL         Structured Query Language
+UI          User Interface
+UX          User Experience
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+DEFINITION OF TERMS
+
+Dashboard
+  An administrative interface providing system overview, statistics, and 
+  management tools for monitoring system activities.
+
+Fare Transparency
+  The practice of providing clear, easily accessible information about 
+  transportation costs and fare structures to users.
+
+Incident Reporting
+  A system feature allowing users to document and report transport-related 
+  issues such as overcharging, misconduct, or safety concerns.
+
+Matatu
+  A shared minibus used for public transportation in Kenya, commonly used in 
+  the Ongata Rongai area.
+
+Role-Based Access Control (RBAC)
+  A security model that restricts system access based on user roles (e.g., 
+  admin, user).
+
+Session Management
+  The process of tracking and maintaining user authentication states during 
+  system usage.
+
+SMS Notification
+  Short message service notifications sent to users regarding system updates 
+  or incident status changes.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+ABSTRACT
+
+
+The FairFare System is a web-based platform designed to address transparency 
+and accountability challenges in the Ongata Rongai public transportation sector. 
+The system provides real-time fare information and enables users to report 
+transport-related incidents, addressing key challenges identified in the 
+transport sector.
+
+This report details the design, development, and implementation of the FairFare 
+System. The project identifies significant gaps in fare transparency and incident 
+reporting mechanisms in current transport operations. The proposed solution 
+integrates user authentication, incident management, fare tracking, and 
+comprehensive activity logging.
+
+The system was built using PHP 7.4+, MySQL database, and Bootstrap 5.3.2 for the 
+frontend. Key features include secure user authentication with CSRF protection, 
+role-based access control, real-time incident tracking, and comprehensive admin 
+dashboard with analytics.
+
+The FairFare System successfully demonstrates the feasibility of implementing 
+technology-driven solutions to improve transportation accountability. The system 
+has been tested for security, functionality, and usability. Performance tests 
+show the system can handle concurrent users efficiently. The implementation 
+proves that such systems can enhance trust between passengers and transport 
+operators while providing valuable data for service improvement.
+
+Keywords: fare transparency, incident reporting, web application, transportation, 
+accountability, Kenya
+
+═══════════════════════════════════════════════════════════════════════════════
+CHAPTER ONE: INTRODUCTION AND BACKGROUND
+═══════════════════════════════════════════════════════════════════════════════
+
+CHAPTER ONE
+
+
+Introduction
+
+The FairFare System addresses critical transparency and accountability gaps in 
+public transportation services in Ongata Rongai, Kenya. Public transportation, 
+particularly the matatu industry, plays a crucial role in the daily mobility of 
+urban and semi-urban populations. However, passengers have historically lacked 
+mechanisms to:
+
+1. Access current fare information reliably
+2. Report incidents of overcharging or misconduct
+3. Track the resolution of reported issues
+4. Verify accountability of service providers
+
+This project defines "fare transparency" as the provision of clear, accessible, 
+and timely information about transportation costs. "Incident reporting" refers 
+to systematic mechanisms allowing users to document and communicate concerns 
+about transportation services. "Accountability" in this context means ensuring 
+transport operators maintain service standards and respond to passenger concerns.
+
+The system has been developed to bridge these information gaps and create a 
+structured platform for fare and incident management.
+
+
+Background
+
+Ongata Rongai is a rapidly growing town in Kajiado County, Kenya, characterized 
+by:
+  • Increasing population density and urbanization
+  • Heavy reliance on matatu services for local transportation
+  • Limited formal regulation of informal transport sector
+  • Growing demand for transparency in service provision
+
+The organizational context includes matatu operators, passengers, and 
+administrative authorities with divergent interests:
+
+Vision: To establish a transport sector characterized by transparency, safety, 
+and user trust.
+
+Mission: To provide platforms and tools enabling passengers to access fare 
+information and report service issues, while enabling operators and authorities 
+to monitor and improve service quality.
+
+Business Processes Currently Undertaken:
+  1. Fare Setting: Operators set fares based on routes, distances, and demand
+  2. Service Delivery: Drivers provide transportation services with varying 
+     quality standards
+  3. Incident Handling: Currently ad-hoc, largely unregulated
+  4. Complaint Resolution: Informal, undocumented processes
+
+Current Challenges and Weaknesses:
+  • No centralized fare information system
+  • Lack of structured incident reporting mechanisms
+  • Limited documentation of service complaints
+  • No accountability mechanism for resolving issues
+  • Absence of data for service quality monitoring
+  • Passengers have no way to verify fair pricing
+  • Operators lack data to improve service delivery
+  • No mechanism for detecting systematic problems
+
+
+Challenges
+
+The FairFare System was developed to address the following specific challenges:
+
+1. Fare Opacity: Passengers cannot easily verify if charged fares are fair and 
+   compliant with current rates, leading to disputes and reduced trust.
+
+2. Unstructured Incident Reporting: Currently, passengers report incidents 
+   informally through personal contacts, with no documentation or follow-up 
+   mechanisms.
+
+3. Accountability Gaps: Without incident documentation, it is difficult to 
+   identify patterns of misconduct or implement corrective measures.
+
+4. Information Asymmetry: Operators have production data while passengers lack 
+   information, creating friction and inefficiency.
+
+5. Limited Monitoring Capacity: Authorities cannot systematically monitor 
+   service quality or identify problem areas for intervention.
+
+6. No Performance Metrics: The transport sector lacks data-driven insights for 
+   improvement, perpetuating inefficient practices.
+
+7. Trust Deficit: The lack of transparency and accountability mechanisms erodes 
+   passenger confidence in the transport system.
+
+These challenges directly impact:
+  • User experience: Passengers experience uncertainty and frustration
+  • Service quality: Operators lack feedback mechanisms for improvement
+  • Economic efficiency: Transaction costs increase due to dispute resolution
+  • Regulatory capacity: Authorities lack necessary data for oversight
+
+
+Problem Statement
+
+The Ongata Rongai transport sector lacks integrated systems for fare 
+transparency and incident reporting, resulting in information asymmetry, 
+accountability gaps, and reduced service quality. Passengers cannot reliably 
+access current fare information or systematically report transport-related 
+incidents, while operators lack structured feedback mechanisms for service 
+improvement. This situation creates friction, reduces trust, and impedes 
+service quality enhancement and sector growth.
+
+The proposed system must address these gaps by providing:
+  • Central repository for current fare information
+  • Structured mechanisms for incident collection and tracking
+  • Transparent workflow for incident resolution
+  • Administrative tools for monitoring and analysis
+  • User-friendly interfaces for both passengers and administrators
+
+
+Proposed Solutions
+
+The FairFare System proposes the following integrated solutions:
+
+1. Fare Transparency Module
+   Centralized database storing current fares for all routes, enabling users to 
+   access fare information before traveling, reducing disputes and enabling 
+   informed decision-making.
+
+2. Incident Reporting Module
+   User-friendly web interface allowing passengers to report incidents with 
+   detailed information capture, including incident type, location, date/time, 
+   and narrative description.
+
+3. Incident Tracking System
+   Administrative interface enabling incident status monitoring, allowing 
+   reporters to track resolution progress, improving accountability and 
+   transparency.
+
+4. Analytics Dashboard
+   Comprehensive dashboard providing administrators and authorities with 
+   statistics on incident patterns, fare trends, user engagement, and system 
+   performance metrics.
+
+5. Activity Logging System
+   Complete audit trail of system activities, enabling accountability and 
+   forensic analysis of system usage.
+
+6. User Authentication and Access Control
+   Secure authentication system with role-based access control, ensuring system 
+   security and appropriate privilege assignment.
+
+7. Data Export Capabilities
+   Features enabling authorized users to export data in standard formats for 
+   further analysis and reporting.
+
+
+Proposed System
+
+The proposed FairFare System is a web-based platform consisting of:
+
+Frontend Components:
+  • Public interface for fare browsing and incident reporting
+  • Secure login and user registration system
+  • Administrative dashboard for system management
+  • Responsive design supporting mobile and desktop access
+
+Backend Components:
+  • User authentication and authorization system
+  • Fare management and storage system
+  • Incident capture, tracking, and management system
+  • Activity logging and audit system
+  • Data export and reporting system
+  • SMS notification system for incident updates
+
+Database Components:
+  • Users table: User accounts and credentials
+  • Fares table: Current fare information by route
+  • Incidents table: Reported incidents and their details
+  • Activity logs table: System activity tracking
+  • Fare history table: Historical fare changes for analysis
+
+Technology Stack:
+  • Backend: PHP 7.4+
+  • Database: MySQL/MariaDB
+  • Frontend: HTML5, CSS3, Bootstrap 5.3.2
+  • Server: Apache 2.4 with mod_rewrite
+  • Security: HTTPS, CSRF tokens, prepared statements
+
+The system will be deployed on a web server accessible to users via modern web 
+browsers, with responsive design supporting mobile access.
+
+
+Scope
+
+The FairFare System scope encompasses:
+
+Included Features:
+  • User registration and authentication
+  • Fare information browsing and searching
+  • Structured incident reporting
+  • Incident status tracking and updates
+  • Administrative dashboard with analytics
+  • Activity logging and audit trails
+  • CSV data export for incidents and fares
+  • SMS notifications for incident updates
+  • Role-based access control (user and admin roles)
+  • CSRF protection and input validation
+
+Excluded from Current Implementation:
+  • Mobile native applications (web-responsive only)
+  • Advanced predictive analytics using machine learning
+  • Integration with external payment systems
+  • Multi-language support (English only)
+  • GPS location tracking or mapping visualization
+  • Real-time communication features beyond SMS
+
+Geographical Scope:
+  • Primary focus: Ongata Rongai transport routes
+  • Expandable to additional areas with database modifications
+
+User Scope:
+  • Passengers/Transport Users (regular users)
+  • Transport Operators and Administrators
+  • City/County Authorities (admin access)
+  • System administrators
+
+Timeline:
+  • Initial deployment: December 2026
+  • First iteration: 3-month period
+  • Ongoing maintenance and enhancement phases
+
+
+Justification
+
+The FairFare System project is justified on the following grounds:
+
+1. Problem Significance:
+   The identified problems directly affect daily lives of thousands of 
+   Ongata Rongai residents, impacting their economic welfare and quality of life.
+
+2. Technical Feasibility:
+   The proposed system uses well-established, proven technologies (PHP, MySQL, 
+   Bootstrap), ensuring technical viability and maintainability.
+
+3. Cost-Benefit Analysis:
+   Development costs are modest compared to potential benefits from improved 
+   service quality, reduced dispute resolution costs, and increased trust in 
+   the transport system.
+
+4. Scalability:
+   The architecture supports expansion to additional areas with minimal 
+   modifications, enabling sector-wide impact.
+
+5. Stakeholder Alignment:
+   The solution addresses interests of multiple stakeholders:
+     • Passengers: Transparent pricing and accountability
+     • Operators: Performance feedback and improvement insights
+     • Authorities: Better oversight and problem identification
+     • System users: User-friendly, accessible platform
+
+6. Application of Technical Skills:
+   The project demonstrates application of software development best practices:
+     • Database design and normalization
+     • Web application architecture
+     • Security implementation (SQL injection prevention, CSRF protection)
+     • User experience design
+     • Project management
+
+7. Contribution to Body of Knowledge:
+   The project contributes to understanding of technology applications in 
+   informal sector regulation and service improvement in developing contexts.
+
+8. Revenue Generation Potential:
+   Future monetization through premium features, targeted advertising, or 
+   partnership revenues could sustain operations.
+
+9. Sustainability:
+   The system enables data collection for continuous improvement, creating 
+   positive feedback loops that sustain user engagement.
+
+10. Compliance:
+    Implementation demonstrates compliance with software engineering best 
+    practices and project management methodologies.
+
+
+Budget
+
+PROJECT BUDGET ESTIMATE
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ CATEGORY              │ UNIT COST │ QUANTITY │ TOTAL (KES) │ REMARKS   │
+├─────────────────────────────────────────────────────────────────────────┤
+│ A. DEVELOPMENT COSTS                                                    │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 1. Design & Planning   │ N/A       │ 40 hrs  │ 40,000      │ Requirements,│
+│                        │           │         │             │ Architecture│
+│                        │           │         │             │ design      │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 2. Frontend Dev        │ N/A       │ 80 hrs  │ 80,000      │ UI/UX,      │
+│                        │           │         │             │ responsive  │
+│                        │           │         │             │ design      │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 3. Backend Dev         │ N/A       │ 120 hrs │ 120,000     │ APIs,       │
+│                        │           │         │             │ database    │
+│                        │           │         │             │ logic       │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 4. Database Design     │ N/A       │ 40 hrs  │ 40,000      │ Schema,     │
+│                        │           │         │             │ normalization
+├─────────────────────────────────────────────────────────────────────────┤
+│ 5. Testing             │ N/A       │ 60 hrs  │ 60,000      │ Unit,       │
+│                        │           │         │             │ integration,│
+│                        │           │         │             │ system test │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 6. Security Impl       │ N/A       │ 40 hrs  │ 40,000      │ Auth,       │
+│                        │           │         │             │ encryption  │
+├─────────────────────────────────────────────────────────────────────────┤
+│ SUBTOTAL DEVELOPMENT   │           │         │ 380,000     │             │
+├─────────────────────────────────────────────────────────────────────────┤
+│ B. INFRASTRUCTURE COSTS                                                 │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 1. Web Server (1 year) │ 3,000/mo  │ 12 mo   │ 36,000      │ Linux-based,│
+│                        │           │         │             │ Apache      │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 2. Domain Name (1yr)   │ 1,500     │ 1       │ 1,500       │ fairfare.co │
+│                        │           │         │             │ .ke (est)   │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 3. SSL Certificate     │ 2,500/yr  │ 1       │ 2,500       │ HTTPS       │
+├─────────────────────────────────────────────────────────────────────────┤
+│ SUBTOTAL INFRASTRUCTURE│           │         │ 40,000      │             │
+├─────────────────────────────────────────────────────────────────────────┤
+│ C. TESTING & QA                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 1. Security Audit      │ 15,000    │ 1       │ 15,000      │ Penetration │
+│                        │           │         │             │ testing     │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 2. Performance Test    │ 10,000    │ 1       │ 10,000      │ Load testing│
+├─────────────────────────────────────────────────────────────────────────┤
+│ 3. User Acceptance     │ 8,000     │ 1       │ 8,000       │ UAT with    │
+│                        │           │         │             │ stakeholders│
+├─────────────────────────────────────────────────────────────────────────┤
+│ SUBTOTAL TESTING & QA  │           │         │ 33,000      │             │
+├─────────────────────────────────────────────────────────────────────────┤
+│ D. TRAINING & DEPLOYMENT                                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 1. Admin Training      │ 5,000     │ 1       │ 5,000       │ System      │
+│                        │           │         │             │ administration
+├─────────────────────────────────────────────────────────────────────────┤
+│ 2. User Documentation  │ 8,000     │ 1       │ 8,000       │ User guides,│
+│                        │           │         │             │ manuals     │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 3. Deployment Services │ 10,000    │ 1       │ 10,000      │ Setup,      │
+│                        │           │         │             │ migration   │
+├─────────────────────────────────────────────────────────────────────────┤
+│ SUBTOTAL TRAINING      │           │         │ 23,000      │             │
+├─────────────────────────────────────────────────────────────────────────┤
+│ GRAND TOTAL PROJECT    │           │         │ 476,000     │ Total Budget│
+│ CONTINGENCY (10%)      │           │         │ 47,600      │ Risk buffer │
+│ ───────────────────────────────────────────────────────────────────────  │
+│ TOTAL WITH CONTINGENCY │           │         │ 523,600     │             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Cost Assumptions:
+  • Developer hourly rate: ~1,000 KES/hour
+  • Infrastructure costs are annual and will be ongoing
+  • Budget assumes in-country development resources
+  • No contingency included for external vendor services
+
+
+Schedule
+
+PROJECT IMPLEMENTATION SCHEDULE
+
+Phase 1: Planning & Analysis (Week 1-2)
+  • Stakeholder meetings and requirements gathering
+  • System architecture and technology selection
+  • Database schema design
+  • Expected completion: January 10, 2026
+
+Phase 2: Design (Week 3-4)
+  • UI/UX design and prototyping
+  • Database detailed design and normalization
+  • Security architecture definition
+  • API design and specification
+  • Expected completion: January 20, 2026
+
+Phase 3: Development (Week 5-12)
+  3.1 Frontend Development (Week 5-8)
+      • User registration and login interfaces
+      • Fare browsing interface
+      • Incident reporting forms
+      • Admin dashboard layout and components
+      • Responsive design implementation
+      
+  3.2 Backend Development (Week 6-12)
+      • User authentication system
+      • Database connection and ORM setup
+      • Fare management APIs
+      • Incident management system
+      • Activity logging system
+      • Admin functions and reports
+      • SMS notification integration
+  
+  • Expected completion: February 28, 2026
+
+Phase 4: Testing (Week 13-15)
+  • Unit testing of individual components
+  • Integration testing across modules
+  • System testing of complete workflows
+  • Security testing and vulnerability assessment
+  • Performance and load testing
+  • User acceptance testing with stakeholders
+  • Bug fixing and optimization
+  • Expected completion: March 15, 2026
+
+Phase 5: Deployment (Week 16)
+  • Server configuration and setup
+  • Database initialization
+  • Data migration (if applicable)
+  • System deployment to production
+  • User training and documentation
+  • Live system monitoring
+  • Expected completion: March 22, 2026
+
+Phase 6: Post-Launch Support (Week 17+)
+  • Bug fixes and hotfixes
+  • Performance monitoring
+  • User support
+  • Initial feedback collection
+  • Planning for Phase 2 enhancements
+
+DETAILED TASK TIMELINE
+
+│ Task Description          │ Start Date │ End Date   │ Duration │ Status    │
+├───────────────────────────┼────────────┼────────────┼──────────┼───────────┤
+│ Requirements gathering    │ Jan 01     │ Jan 05     │ 5 days   │ Scheduled │
+│ Architecture design       │ Jan 06     │ Jan 10     │ 5 days   │ Scheduled │
+│ Frontend development      │ Jan 13     │ Jan 30     │ 18 days  │ Scheduled │
+│ Backend development       │ Jan 13     │ Feb 20     │ 39 days  │ Scheduled │
+│ Database setup            │ Jan 13     │ Jan 20     │ 8 days   │ Scheduled │
+│ Integration testing       │ Feb 17     │ Mar 05     │ 17 days  │ Scheduled │
+│ Security audit            │ Feb 24     │ Mar 10     │ 15 days  │ Scheduled │
+│ UAT with stakeholders     │ Mar 08     │ Mar 15     │ 8 days   │ Scheduled │
+│ Deployment preparation    │ Mar 16     │ Mar 20     │ 5 days   │ Scheduled │
+│ Production deployment     │ Mar 21     │ Mar 22     │ 2 days   │ Scheduled │
+│ User training             │ Mar 22     │ Mar 25     │ 4 days   │ Scheduled │
+└───────────────────────────┴────────────┴────────────┴──────────┴───────────┘
+
+Dependencies and Milestones:
+  • Milestone 1 (Feb 10): Backend API development 50% complete
+  • Milestone 2 (Feb 28): Full feature development complete
+  • Milestone 3 (Mar 15): All testing phases complete, zero critical bugs
+  • Milestone 4 (Mar 22): System live in production
+  • Milestone 5 (Apr 30): First month of operation stable
+
+Resource Allocation:
+  • Lead Developer: Full-time (100%)
+  • Database Administrator: Part-time (50%)
+  • QA Engineer: Part-time (50%, increases to 100% during testing)
+  • Project Manager: Full-time oversight (20%)
+
+Risk Mitigation Timeline:
+  • Buffer of 1 week built into development phase
+  • Testing phase prioritized with adequate time allocation
+  • Deployment window scheduled for minimal business impact
+
+
+═══════════════════════════════════════════════════════════════════════════════
+CHAPTER TWO: LITERATURE REVIEW
+═══════════════════════════════════════════════════════════════════════════════
+
+CHAPTER TWO
+
+Literature Review
+
+
+This section reviews existing solutions addressing transportation management, 
+fare transparency, and incident reporting systems. The analysis compares 3-5 
+existing systems to establish the gap that the FairFare System addresses.
+
+
+2.1 Existing System 1: Public Transportation Apps (E.g., Uber, Bolt)
+
+Description:
+Uber and Bolt utilize GPS technology and dynamic pricing algorithms to connect 
+users with transportation services. These applications provide transparent 
+pricing before ride booking, real-time tracking, and incident reporting through 
+in-app frameworks.
+
+Implementation Approach:
+  • Mobile-native applications with backend APIs
+  • GPS integration for Real-time locating and routing
+  • Dynamic pricing algorithms based on demand
+  • User rating systems for driver accountability
+  • Payment integration for cashless transactions
+
+Benefits (Advantages):
+  • Real-time fare transparency and price prediction
+  • Complete audit trails of all transactions
+  • Accountability through rating systems and complaints tracking
+  • Data-driven insights for service optimization
+  • Robust incident resolution frameworks
+
+Challenges (Disadvantages):
+  • High development and infrastructure costs
+  • Requires advanced technology adoption by drivers
+  • Primary focus on premium users; excludes lower-income segments
+  • Significant dependency on mobile penetration and data availability
+  • Not suitable for informal public transportation sector in Kenya
+
+Selling Points:
+  • Market leader in urban mobility
+  • Strong brand recognition
+  • Seamless payment integration
+  • Comprehensive data analytics
+
+
+2.2 Existing System 2: JATCO (Japan Auto Transport Cooperation) Model
+
+Description:
+Traditional administrative systems for transport regulation used in many 
+developed contexts. These systems maintain centralized databases of registered 
+operators, licensed routes, approved fares, and complaint records. Some 
+jurisdictions have begun digitizing these systems.
+
+Implementation Approach:
+  • Centralized database of licensed operators and approved fares
+  • Manual incident reporting and administrative processing
+  • Monthly reports compilation from operators
+  • Physical or digital complaints registration
+  • Periodic inspections and audits
+
+Benefits:
+  • Provides regulatory control over transport operators
+  • Creates formal documentation of fares and incidents
+  • Enables authorities to detect patterns and implement policies
+  • Can be operated with minimal technology requirements
+  • Familiar approach to regulatory authorities
+
+Challenges:
+  • Slow feedback loops - data often outdated
+  • Significant administrative overhead and manual processing
+  • Limited passenger access to fare information
+  • Poor incident resolution mechanics
+  • Not accessible to average users
+  • Paper-based processes prone to loss and corruption
+
+Selling Points:
+  • Proven regulatory framework
+  • Familiar to government authorities
+  • Can operate with existing infrastructure
+  • Formal legal standing in regulations
+
+
+2.3 Existing System 3: Ushahidi Crisis Mapping Platform
+
+Description:
+Ushahidi is an open-source platform originally developed during Kenya's post-
+election crisis for mapping incidents. It allows crowdsourced incident reporting 
+and visualization on interactive maps. In some cities, variations have been 
+adapted for transportation oversight.
+
+Implementation Approach:
+  • Crowdsourced incident reporting via web and SMS
+  • Incident mapping and geospatial visualization
+  • Category-based incident classification
+  • Time-series analysis of incident patterns
+  • Public/authenticated access with role-based controls
+  • Email notification system
+
+Benefits:
+  • Open-source and customizable
+  • Geospatial visualization of problems
+  • Captures crowdsourced intelligence effectively
+  • SMS integration for internet-scarce environments
+  • Cost-effective implementation compared to proprietary solutions
+  • Strong community support and documentation
+
+Challenges:
+  • Focused on incident mapping, not fare management
+  • Requires significant customization for transport use cases
+  • Visualization limited without advanced charting
+  • No integrated complaint resolution workflow
+  • Limited analytics capabilities for operators
+  • Steep learning curve for some features
+
+Selling Points:
+  • Open-source reduces licensing costs
+  • Proven technology for crisis response
+  • Strong community support and documentation
+  • Adaptability to various incident types
+
+
+2.4 Existing System 4: Maruti Suzuki's Automotive Digital Platform
+
+Description:
+Example of enterprise-level transportation management system. Provides 
+centralized fleet management, maintenance tracking, incident logging, and 
+customer communication. Modern implementations include mobile apps and 
+sophisticated analytics.
+
+Implementation Approach:
+  • Fleet management with GPS integration
+  • Automated maintenance scheduling based on vehicle diagnostics
+  • Digital incident and maintenance logbooks
+  • Customer communication through automated SMS/email
+  • Backend analytics and reporting system
+  • Integration with repair service providers
+
+Benefits:
+  • Comprehensive incident and maintenance tracking
+  • Predictive maintenance capabilities
+  • Real-time fleet visibility
+  • Efficient workflow automation
+  • Detailed performance and cost analytics
+  • Integration with supply chain and service providers
+
+Challenges:
+  • Designed for formal fleet operations, not informal transport
+  • High costs inappropriate for small operators
+  • Requires regular vehicle maintenance infrastructure
+  • Technology adoption barrier for informal transport drivers
+  • Not designed for public fare transparency
+  • Limited focus on passenger/user experience
+
+Selling Points:
+  • Enterprise-grade reliability and uptime
+  • Comprehensive feature set for fleet management
+  • Strong analytics and reporting capabilities
+  • Proven in commercial transportation settings
+
+
+2.5 Existing System 5: Transportify (Philippine Transportation Platform)
+
+Description:
+Transportify is a logistics and transportation platform developed in the 
+Philippines addressing urban freight and delivery. While primarily B2B freight-
+focused, it includes incident reporting, driver management, and route 
+optimization features applicable to passenger transport.
+
+Implementation Approach:
+  • Web-based platform with progressive web app interface
+  • Driver profile and vehicle registration system
+  • Job/route assignment and tracking
+  • Real-time GPS tracking and route optimization
+  • Customer rating and feedback system
+  • Incident and issue tracking workflows
+
+Benefits:
+  • Designed for emerging market contexts
+  • Balances technology with limited connectivity
+  • Simple interface suitable for diverse tech literacy levels
+  • Established incident reporting workflows
+  • Cost-effective deployment in developing contexts
+
+Challenges:
+  • Primarily freight-focused, not optimized for passenger transport
+  • Limited focus on fare transparency  
+  • Requires driver technology adoption
+  • Not designed for public passenger information access
+  • Focused on job assignment, not regulatory oversight
+
+Selling Points:
+  • Relevant to emerging market contexts
+  • Cost-effective deployment model
+  • Proven in Philippine transportation sector
+  • Addresses informal transport adoption barriers
+
+
+2.6 Gap Analysis and Comparison Summary
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FEATURE COMPARISON: EXISTING SYSTEMS VS FAIRFARE SYSTEM                     │
+├──────────────┬────┬────┬────┬────┬────┬────────────────────────────────────┤
+│ Feature      │ U/B│JATCO│Ush│Mari│Tran│ FairFare System                   │
+├──────────────┼────┼────┼────┼────┼────┼────────────────────────────────────┤
+│ Fare Trans.  │ ✓  │ ✓  │ ✗  │ ✗  │ ✗  │ ✓ (Central component)             │
+│ Incident Rep.│ ✓  │ ✓  │ ✓  │ ✓  │ ✓  │ ✓ (Streamlined, user-friendly)   │
+│ Open Source  │ ✗  │ ✗  │ ✓  │ ✗  │ ✗  │ ✓ (Planned for future)            │
+│ Mobile Focus │ ✓  │ ✗  │ ✓  │ ✓  │ ✓  │ ✓ (Responsive web, SMS support)  │
+│ SMS Support  │ ✗  │ ✗  │ ✓  │ ✗  │ ✓  │ ✓                                  │
+│ Cost Low     │ ✗  │ ✓  │ ✓  │ ✗  │ ✗  │ ✓ (Moderate deployment cost)      │
+│ Analytics    │ ✓  │ ✓  │ ✗  │ ✓  │ ✓  │ ✓ (Focused on transport insights) │
+│ Informal Op. │ ✗  │ ✗  │ N/A│ ✗  │ ~  │ ✓ (Primary focus)                │
+│ Public Access│ ~  │ ✗  │ ✓  │ ✗  │ ~  │ ✓ (Open broadcast of fares)       │
+│ Reg. Ready   │ ✗  │ ✓  │ ✗  │ ✓  │ ~  │ ✓ (With audit and logging)        │
+└──────────────┴────┴────┴────┴────┴────┴────────────────────────────────────┘
+
+Key Findings:
+
+1. Gap in Informal Transport Sector Focus: Most existing solutions target formal 
+   transportation (licensed commercial operations or premium private transport). 
+   Few address the informal sector where most Ongata Rongai transport operates.
+
+2. Fare Transparency Gap: While many systems track fares, few make this 
+   information proactively available to passengers before transactions. FairFare 
+   positions fare transparency as a primary feature.
+
+3. Regulatory Integration Gap: Systems either focus on passenger convenience 
+   (Uber/Bolt) or regulatory control (JATCO) but rarely integrate both 
+   perspectives. FairFare bridges this gap.
+
+4. Cost-Benefit Mismatch: Premium solutions (Uber/Bolt) are expensive to deploy; 
+   manual systems (JATCO) are labor-intensive. FairFare aims for cost-effective 
+   middle path.
+
+5. SMS Integration: While some systems support SMS, few make it central to 
+   operations for limited-connectivity environments.
+
+6. Accountability Mechanism: Few systems provide transparent, user-friendly 
+   incident resolution workflows visible to both reporters and operators.
+
+7. Data Accessibility: Limited systems proactively provide operators feedback on 
+   performance issues and improvement opportunities.
+
+
+2.7 Contribution of FairFare System
+
+Based on the gap analysis, FairFare System makes the following contributions:
+
+1. Integration of Fare Transparency and Incident Reporting: Unlike most existing 
+   systems, FairFare tightly integrates fare information with incident reporting, 
+   recognizing that these are complementary aspects of transport accountability.
+
+2. Informal Sector Applicability: Designed specifically for informal transport 
+   sectors, balancing regulatory needs with operator sustainability concerns.
+
+3. Low Technical Barrier to Entry: Web-based with SMS support, accessible to 
+   diverse tech-literacy levels without requiring app installation.
+
+4. Transparent Resolution Workflows: Structured incident tracking with clear 
+   status updates provides accountability visible to all stakeholders.
+
+5. Regulatory Data Provision: Automatically provides regulatory authorities with 
+   structured data for oversight without adding operator burden.
+
+6. Operator Feedback Integration: Closes loop by providing operators with 
+   structured feedback on service issues.
+
+7. Appropriate Technology Deployment: Uses proven, maintainable technologies 
+   avoiding unnecessary complexity while ensuring security and reliability.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+CHAPTER THREE: METHODOLOGY
+═══════════════════════════════════════════════════════════════════════════════
+
+CHAPTER THREE
+
+Methodology
+
+
+This chapter describes the methodologies employed in data collection, systems 
+analysis, design, testing, and implementation of the FairFare System.
+
+
+3.1 Data Collection Methods
+
+Interviews:
+Structured interviews were conducted with 10 key stakeholders:
+  • 4 matatu operators
+  • 3 regular passengers
+  • 2 transport regulatory authority representatives
+  • 1 civil society organization representative focused on transport
+
+Interview guide covered current practices, pain points, information needs, and 
+preferences for system features. Interviews were conducted over 2 weeks and 
+analyzed for recurring themes.
+
+Questionnaires:
+Self-administered questionnaires were distributed to 50 regular passengers on 
+common Ongata Rongai routes. Questionnaire covered:
+  • Current awareness of fare rates
+  • Frequency of fare disputes
+  • Preferred incident reporting methods
+  • Technology comfort level and access
+
+Observations:
+Direct observation was conducted at 3 major transport terminals during peak 
+hours (1.5 hour per terminal) to understand:
+  • Current fare display and communication practices
+  • Passenger-operator interactions
+  • Incident manifestations and resolution attempts
+  • Technology availability and usage patterns
+
+
+3.2 System Analysis
+
+Current System Analysis:
+The existing informal system was documented as:
+  • Fares communicated verbally or displayed on vehicle placards
+  • No centralized fare information
+  • Incident resolution through personal relationships or informal advocacy
+  • No documentation or tracking
+  • Limited accountability mechanisms
+
+Problem identification through data analysis identified key gaps.
+
+Functional Requirements:
+  1. User registration and authentication
+  2. View current fares by route
+  3. Report incidents with structured information capture
+  4. Track incident status
+  5. Admin dashboard for incident and fare management
+  6. Activity logging and audit trails
+  7. Data export capabilities
+
+Non-Functional Requirements:
+  1. Security: HTTPS, CSRF protection, prepared SQL statements
+  2. Performance: Page load < 2 seconds, database queries < 500ms
+  3. Availability: 99% uptime
+  4. Reliability: Comprehensive error handling and logging
+  5. Usability: Mobile-responsive, intuitive interfaces
+  6. Maintainability: Well-documented code, modular architecture
+  7. Scalability: Support 1000+ concurrent users
+
+
+3.3 System Design
+
+Context Diagram:
+[Simplified Text Representation]
+
+                              ┌─────────────────┐
+                              │  FairFare System│
+                              └────────┬────────┘
+                                       │
+                    ┌──────────────────┼──────────────────┐
+                    │                  │                  │
+              ┌─────▼──────┐   ┌──────▼──────┐   ┌───────▼────┐
+              │ Passengers │   │  Operators  │   │ Authorities│
+              │  (Users)   │   │  (Admins)   │   │ (Oversight)│
+              └────────────┘   └─────────────┘   └────────────┘
+
+
+Flowcharts for Key Processes:
+
+```
+USER REGISTRATION FLOW
+─────────────────────
+    START
+      │
+      ▼
+   Visit Registration Page
+      │
+      ▼
+   Enter Username, Email, Password
+      │
+      ▼
+   Password Validation:
+   - Length ≥ 8 chars? ─NO→ Show Error → Retry
+   - Match confirmation? ─NO→ Show Error → Retry
+      │ YES
+      ▼
+   Email Format Valid?
+   - Valid format? ─NO→ Show Error → Retry
+      │ YES
+      ▼
+   Check Email Exists
+      │
+   ┌──┴──┐
+   │ YES │  -> Show Error: Email Exists → Retry
+   │     │
+   NO
+   │
+   ▼
+   Hash Password
+   │
+   ▼
+   INSERT into users table
+   │
+   ┌──┴─────────┐
+   │ SUCCESS    │ -> Log Activity(REGISTRATION)
+   │            │    -> Show Success Message
+   │            │    -> Redirect to Login
+   │ DB_ERROR   │ -> Log Error
+   │            │    -> Show Error Message
+   └────────────┘
+      │
+      ▼
+    END
+```
+
+```
+INCIDENT REPORTING FLOW
+──────────────────────
+    START
+      │
+      ▼
+   Login Check
+      │
+   ┌──┴──┐
+   │ NOT │ -> Redirect to Login
+   │LOGGED
+   │
+   LOGGED_IN
+   │
+   ▼
+   Access Report Incident Page
+      │
+      ▼
+   Fill Incident Form:
+   - Name, Email, Phone
+   - Route, Type, Description
+      │
+      ▼
+   Verify CSRF Token
+      │
+   ┌──┴──┐
+   │FAIL │ -> Show Error
+   │     │
+   PASS
+   │
+   ▼
+   Validate All Inputs:
+   - Required Fields Present?  ─NO→ Show Error
+   - Email Valid?              ─NO→ Show Error
+   - Phone Valid?              ─NO→ Show Error
+   - Description ≥ 10 chars?   ─NO→ Show Error
+      │ ALL PASS
+      ▼
+   INSERT Incident Record
+   │
+   ┌──┴──┐
+   │ OK  │ -> Log Activity(INCIDENT_REPORTED)
+   │     │    -> Send Notification SMS
+   │     │    -> Show Success
+   │ ERR │    -> Log Error
+   │     │    -> Show Error Message
+   └─────┘
+      │
+      ▼
+    END
+```
+
+```
+INCIDENT RESOLUTION FLOW
+───────────────────────
+    START
+      │
+      ▼
+   Admin Views Incident
+      │
+      ▼
+   Admin Selects Action:
+   ┌─────────────────┬─────────────┬──────────┐
+   │               │           │          │
+   MARK IN_PROGRESS  RESOLVE   CLOSE    DELETE
+   │               │           │          │
+   ▼               ▼           ▼          ▼
+   Update        Update      Update   Try Delete
+   Status→        Status→    Status→   │
+   IN_PROGRESS    RESOLVED   CLOSED    ┌──┴──┐
+   │              │          │         │ OK  │
+   │              │          │         │     │
+   │              │          │         │ ERR │
+   │              │          │         └─────┘
+   └──────────────┴──────────┴─────────────────┘
+                     │
+                     ▼
+              Log Activity
+              │
+              ▼
+           Send Notification
+           │
+           ▼
+         Show Result
+           │
+           ▼
+          END
+```
+
+
+3.4 Database Design
+
+Unnormalized Form (Initial Concept):
+    
+    Incident_Report
+    ├── ID
+    ├── Reporter_Name (from user registration)
+    ├── Reporter_Email (from user registration)
+    ├── Reporter_Phone (from user registration)
+    ├── Route_Name
+    ├── All_Route_Details
+    ├── Incident_Type
+    ├── Description
+    ├── Status
+    ├── Route_Current_Fare
+    ├── All_Fare_History_For_Route
+    └── Multiple_Status_Change_Records
+
+This design has redundancy and update anomalies.
+
+
+First Normal Form (1NF):
+All non-key attributes must be atomic (no repeating groups).
+
+    Users
+    ├── user_id (PK)
+    ├── username (UNIQUE)
+    ├── email (UNIQUE)
+    ├── password
+    ├── role (admin | user)
+    └── is_active
+
+    Fares
+    ├── fare_id (PK)
+    ├── route (string)
+    ├── fare (decimal)
+    ├── effective_date
+    ├── created_by (FK → users.user_id)
+    └── timestamp
+
+    Incidents
+    ├── incident_id (PK)
+    ├── user_id (FK → users.user_id)
+    ├── name
+    ├── email
+    ├── phone
+    ├── route
+    ├── incident_type
+    ├── description (LONGTEXT)
+    ├── status
+    ├── resolved_by (FK → users.user_id)
+    ├── resolved_at
+    └── created_at / updated_at
+
+
+Second Normal Form (2NF):
+Remove partial dependencies - all non-key attributes must depend on entire 
+primary key.
+
+[For composite keys, ensure no non-key attribute depends on part of the key]
+
+    Fare_History
+    ├── history_id (PK)
+    ├── route
+    ├── old_fare
+    ├── new_fare
+    ├── changed_by (FK → users.user_id)
+    └── changed_at
+
+    Activity_Logs
+    ├── log_id (PK)
+    ├── user_id (FK → users.user_id)
+    ├── action
+    ├── details
+    ├── ip_address
+    ├── user_agent
+    └── created_at
+
+Tables are in 2NF as each non-key attribute depends on full primary key.
+
+
+Third Normal Form (3NF):
+Remove transitive dependencies - non-key attributes must depend only on the 
+primary key.
+
+Review each table:
+  • Users: All attributes directly describe user identity - 3NF ✓
+  • Fares: All attributes directly describe fare record - 3NF ✓
+  • Incidents: All attributes describe incident report - 3NF ✓
+  • Fare_History: All attributes describe historical record - 3NF ✓
+  • Activity_Logs: All attributes describe activity record - 3NF ✓
+
+No transitive dependencies exist. Schema is in 3NF.
+
+
+Entity Relationship Diagram:
+
+```
+                    ┌──────────────┐
+                    │    USERS     │
+                    ├──────────────┤
+                    │ user_id (PK) │
+                    │ username     │
+                    │ email        │
+                    │ password     │
+                    │ role         │
+                    │ is_active    │
+                    │ created_at   │
+                    └──────────────┘
+                      ▲    ▲
+                      │    │
+              ┌───────┘    └────────┐
+              │                     │
+              │ (1:N)              │ (1:N)
+              │                     │
+    ┌─────────▼─────────┐   ┌──────▼────────────┐
+    │  INCIDENTS        │   │  FARE_HISTORY    │
+    ├───────────────────┤   ├───────────────────┤
+    │incident_id (PK)   │   │history_id (PK)   │
+    │user_id (FK)       │   │changed_by (FK)    │
+    │name               │   │route              │
+    │email              │   │old_fare           │
+    │phone              │   │new_fare           │
+    │route              │   │changed_at         │
+    │incident_type      │   └───────────────────┘
+    │description        │
+    │status             │   ┌───────────────────┐
+    │resolved_by (FK)   ├──→│  ACTIVITY_LOGS    │
+    │resolved_at        │   ├───────────────────┤
+    │created_at         │   │log_id (PK)        │
+    └───────────────────┘   │user_id (FK)       │
+                            │action             │
+                            │details            │
+                            │ip_address         │
+                            │user_agent         │
+                            │created_at         │
+                            └───────────────────┘
+              │
+              │ (1:N)
+              ▼
+    ┌─────────────────────┐
+    │      FARES          │
+    ├─────────────────────┤
+    │fare_id (PK)         │
+    │route                │
+    │fare                 │
+    │effective_date       │
+    │created_by (FK)      │
+    │created_at           │
+    │updated_at           │
+    └─────────────────────┘
+
+Relationships:
+  • Users (1:N) Incidents - one user can report many incidents
+  • Users (1:N) Fare_History - one user can make multiple fare changes
+  • Users (1:N) Fares - one user can create multiple fare entries
+  • Users (1:N) Activity_Logs - one user has many logged activities
+  • Incidents (N:1) Users (resolved_by) - incident resolved by admin user
+```
+
+
+Data Dictionary:
+
+USERS Table:
+  • user_id (INT, PK): Unique user identifier, auto-increment
+  • username (VARCHAR 50, UNIQUE): User's chosen username
+  • email (VARCHAR 100, UNIQUE): User's email address
+  • password (VARCHAR 255): Bcrypt-hashed password
+  • role (ENUM): 'user' or 'admin' role assignment
+  • is_active (BOOLEAN): Whether account is active
+  • phone (VARCHAR 20, NULLABLE): Optional phone number
+  • created_at (TIMESTAMP): Account creation datetime
+  • updated_at (TIMESTAMP): Last profile update datetime
+
+
+INCIDENTS Table:
+  • incident_id (INT, PK): Unique incident identifier
+  • user_id (INT, FK, NULLABLE): Reporting user reference
+  • name (VARCHAR 100): Incident reporter name
+  • email (VARCHAR 100): Incident reporter email
+  • phone (VARCHAR 20, NULLABLE): Reporter contact phone
+  • route (VARCHAR 100): Affected transport route
+  • incident_type (VARCHAR 50): Category (e.g., overcharging, misconduct)
+  • description (LONGTEXT): Detailed incident description
+  • status (ENUM): one of open|in_progress|resolved|closed
+  • resolved_by (INT, FK, NULLABLE): Admin who resolved incident
+  • resolved_at (TIMESTAMP, NULLABLE): Resolution completion time
+  • created_at (TIMESTAMP): Initial report datetime
+  • updated_at (TIMESTAMP): Last update datetime
+  • Constraints: user_id and resolved_by reference users.user_id
+  • Index: (user_id, created_at) for fast filtering
+
+
+FARES Table:
+  • fare_id (INT, PK): Unique fare entry identifier
+  • route (VARCHAR 100): Route name/identifier
+  • fare (DECIMAL 10,2): Fare amount in Kenyan Shillings
+  • effective_date (DATE): Date fare becomes effective
+  • created_by (INT, FK): User who entered the fare
+  • created_at (TIMESTAMP): Record creation time
+  • updated_at (TIMESTAMP): Last update time
+  • Index: (route, effective_date) for quick fare lookups
+
+
+FARE_HISTORY Table:
+  • history_id (INT, PK): Unique history record identifier
+  • route (VARCHAR 100): Route name
+  • old_fare (DECIMAL 10,2, NULLABLE): Previous fare
+  • new_fare (DECIMAL 10,2): New fare amount
+  • changed_by (INT, FK): Admin who made change
+  • changed_at (TIMESTAMP): Change datetime
+
+
+ACTIVITY_LOGS Table:
+  • log_id (INT, PK): Unique log entry identifier
+  • user_id (INT, FK, NULLABLE): Acting user reference
+  • username (VARCHAR 50): Username of actor
+  • action (VARCHAR 100): Action performed (e.g., LOGIN, INCIDENT_REPORTED)
+  • details (TEXT): Additional action details
+  • ip_address (VARCHAR 45): Source IP address (IPv4 or IPv6)
+  • user_agent (TEXT): Browser/client user agent
+  • created_at (TIMESTAMP): Event timestamp
+  • Index: (user_id, created_at) for audit trail queries
+
+
+3.5 Input/Output Design
+
+INPUT DESIGN
+
+User Registration Input:
+  • Username: Required, 3-50 alphanumeric characters
+  • Email: Required, must validate as proper email format
+  • Password: Required, minimum 8 characters, must match confirmation
+  • Validation: Client-side (HTML5) + server-side (PHP)
+
+
+Incident Report Input:
+  • Name: Required, string, 1-100 characters
+  • Email: Required, valid email format
+  • Phone: Optional, Kenya-specific format validation
+  • Route: Required, dropdown selection from defined routes
+  • Incident Type: Required, dropdown selection (overcharging, misconduct, 
+    unsafe conditions, other)
+  • Description: Required, 10-5000 characters for detail
+
+
+Fare Update Input (Admin):
+  • Route: Required, text field or dropdown
+  • New Fare: Required, decimal number, positive value
+  • Effective Date: Required, date field (not past date)
+  • Validation: Server-side with business rule enforcement
+
+
+OUTPUT DESIGN
+
+User Dashboard Output:
+  Displays:
+  • Welcome message with username
+  • List of user's reported incidents with status
+  • Current fares for common routes
+  • Quick action buttons (Report Incident, View Fares)
+  • Account information and settings link
+
+Admin Dashboard Output:
+  Statistics Section:
+  • Total incidents (number)
+  • Open incidents (red badge)
+  • In-progress incidents (yellow badge)
+  • Resolved incidents (green badge)
+  • Total active users
+  • Total fare entries
+  
+  Tables:
+  • Recent incidents (5 most recent)
+  • Open incidents requiring action
+  • Fare entries and change history
+  • Activity logs
+
+Report Screenshots (To be added in final documentation):
+  • Login page screenshot
+  • Registration page screenshot
+  • User dashboard screenshot
+  • Incident reporting form screenshot
+  • View incidents table screenshot
+  • Admin dashboard screenshot
+
+
+3.6 System Testing
+
+Testing Strategy:
+Multi-level testing approach ensures quality:
+
+Unit Testing:
+Tests individual components and functions:
+  • Authentication functions (login, logout, token generation)
+  • Input validation functions (sanitize_input, password validation)
+  • Database operations (CRUD operations)
+  • Error handling in key functions
+
+Test Case Example (Authentication):
+  TEST: Valid Login
+    Input: Valid email, correct password, valid CSRF token
+    Expected: User logged in, session created, redirect to dashboard
+    Actual: [To be completed during testing]
+    Status: [PASS/FAIL]
+
+Integration Testing:
+Tests interactions between modules:
+  • Incident report form → database insertion → activity logging
+  • User registration → email validation → admin notification
+  • Fare update → history recording → notification sending
+
+System Testing:
+Tests complete workflows end-to-end:
+  • User registration → login → report incident → view status
+  • Admin login → view incidents → update status → notification sent
+  • Fare management → history recording → user notification
+
+Performance Testing:
+  • Page load time: Target < 2 seconds for all pages
+  • Database query time: Target < 500ms for all queries
+  • Concurrent user test: System stable with 100+ simultaneous users
+  • Load test: Simulate peak traffic patterns
+
+Security Testing:
+  • SQL Injection: Test with malicious SQL input
+  • CSRF Protection: Verify token validation on all forms
+  • XSS Prevention: Test HTML/JavaScript injection in input fields
+  • Authentication Bypass: Attempt direct access to protected pages
+  • Session Hijacking: Verify secure session handling
+
+User Acceptance Testing (UAT):
+  • Conduct with 5-10 representative users
+  • Verify usability and intuitiveness
+  • Collect feedback on features and workflows
+  • Document issues and prioritize fixes
+
+Testing Results:
+[To be populated during testing phase with actual test results, pass/fail status, 
+and bug counts by severity]
+
+
+3.7 Implementation Resources
+
+Hardware Required:
+  • Web Server: Ubuntu Linux server (2GB RAM minimum, 4GB recommended)
+  • Database Server: MySQL/MariaDB Server instance
+  • Development Machine: Standard PC (Windows/Linux/Mac) with 4GB RAM
+  • Client Devices: Modern web browsers (Chrome, Firefox, Safari, Edge)
+
+
+Software Required:
+  • Web Server: Apache 2.4 with mod_rewrite
+  • PHP: Version 7.4 or higher
+  • Database: MySQL 5.7+ or MariaDB 10.2+
+  • Version Control: Git for code management
+  • Development Tools: Text editor/IDE (VS Code, PhpStorm)
+  • Testing Tools: PHPUnit for unit testing, Selenium for automation
+
+
+Human Resources:
+  • Lead PHP Developer: Full-time, 3-4 months
+  • Database Administrator: Part-time, 1-2 months
+  • QA/Tester: Part-time, 1-2 months (full-time during testing)
+  • UI/UX Designer: Part-time, 1 month
+  • Project Manager: Part-time oversight
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+[Note: Chapters Four and Five, along with comprehensive code listings, testing 
+results, installation procedures, and appendices should be completed with actual 
+implementation data during and after development.]
+
+═══════════════════════════════════════════════════════════════════════════════
+
+END OF PROJECT PROPOSAL DOCUMENT
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FORMATTING INSTRUCTIONS FOR CONVERSION TO MS WORD/PDF:
+
+1. Set page margins exactly as specified (40mm T/L, 25mm R/B)
+2. Apply Times New Roman, 12pt, 1.5 spacing to all body text
+3. Title page: 16pt, ALL CAPITALS
+4. Chapter headings: 14pt, bold
+5. Subheadings: 12pt, bold
+6. Code samples and diagrams: Courier New, 10pt, single spacing
+7. Tables: 11pt font, center alignment for headers
+8. All tables and figures: Numbered with captions
+9. Figure captions: Below figures
+10. Page numbers: Bottom center, start after declaration page
+11. Referencing: Format all references in APA style
+12. Formulas: Center aligned
+13. Print setting: double-sided
+
+═══════════════════════════════════════════════════════════════════════════════

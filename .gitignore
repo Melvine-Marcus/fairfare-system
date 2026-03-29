@@ -1,0 +1,18 @@
+# Ignore XAMPP and PHP debug artifacts
+/vendor/
+/node_modules/
+/.idea/
+/.vscode/
+/.env
+/config.php
+/error_log
+/php_errorlog
+
+# Ignore generated files
+*.log
+*.sqlite
+*.db
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
